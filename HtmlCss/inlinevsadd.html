@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Inline vs Add Event Listener</title>
+</head>
+<style>
+
+</style>
+
+<body>
+  <div id="dateComponent"></div>
+  <button id="dateBtn">Click for Date</button>
+  <!-- <button onclick="renderDate()">Click for Date</button> -->
+</body>
+<script>
+  const dateElement = document.getElementById('dateComponent');
+  const dateBtn = document.getElementById('dateBtn');
+  // renderDate = () => {
+  //   dateElement.innerHTML = Date();
+  // }
+  dateBtn.addEventListener('click', (event) => {
+    dateElement.innerHTML = Date();
+  });
+</script>
+
+</html>

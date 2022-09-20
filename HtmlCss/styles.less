@@ -1,0 +1,39 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.myMixin {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+.content {
+  .myMixin();
+}
+
+.myButton {
+  width: 50vw;
+  height: 75px;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #F6F6F6;
+  border-radius: 15px;
+
+  &:hover {
+    background-color: lightgrey;
+  }
+
+  &:active {
+    background-color: beige;
+  }
+}

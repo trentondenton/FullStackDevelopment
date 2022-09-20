@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Character Countdown</title>
+</head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .msgInput {
+    height: 24px;
+    font-size: 16px;
+  }
+
+  .msgCounter {
+    color: red;
+    font-size: 16px;
+  }
+</style>
+
+<body>
+  <input type="text" class="msgInput">
+
+  <div>
+    Characters left <span class="msgCounter"></span>
+  </div>
+</body>
+<script>
+  const getCurrentContentLength = (content, max) => {
+    const maxLength = max;
+    if (content.length > maxLength) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  const msgInput = document.querySelector('.msgInput');
+  const counter = document.querySelector('.msgCounter');
+  const max = 20;
+
+  msgInput.onkeyup = function () {
+    counter.innerHTML = max - this.value.length;
+    if (!getCurrentContentLength(this.value, (max - 1))) {
+      msgInput.disabled = true;
+    }
+  }
+</script>
+
+</html>

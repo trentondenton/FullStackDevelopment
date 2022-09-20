@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Function</title>
+</head>
+<style>
+  .hidden {
+    display: none;
+  }
+
+  #toggleBtn {
+    background-color: cornflowerblue;
+    border: none;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    animation: 0.3s ease-in-out all;
+  }
+
+  #mainHeading {
+    font-size: 42px;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+  }
+</style>
+
+<body>
+  <button id="toggleBtn">Toggle Me</button>
+
+  <div id="mainHeading" class="hidden">
+    Hello, it's me.
+  </div>
+</body>
+<script>
+  const heading = document.getElementById('mainHeading');
+  const btn = document.getElementById('toggleBtn');
+  btn.addEventListener('click', (e) => {
+    heading.classList.toggle('hidden');
+  });
+</script>
+
+</html>
