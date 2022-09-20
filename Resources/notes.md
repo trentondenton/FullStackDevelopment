@@ -62,9 +62,7 @@
 
 ------------------------------------------------------------------------
 
-#Installations
-
-------------------------------------------------------------------------
+# Installations
 ## WINDOWS
 ### Pipenv: 
 + pip install --upgrade pip
@@ -75,7 +73,7 @@
 + https://docs.npmjs.com/creating-a-new-npm-user-account
 + npm login
 + npm whoami
-
++ 
 ### NodeJS:
 + Ensure you select the LTS Version.
   
@@ -83,7 +81,9 @@
 + Run PowerShell as Administrator and type Set-ExecutionPolicy Unrestricted
 
 ### MySQL:
-
++ https://dev.mysql.com/downloads/windows/installer/8.0.html
++ Download the option without "Web"
++ Choose Developer Default install option
 
 ------------------------------------------------------------------------
 
@@ -103,9 +103,3 @@
 + npm whoami
 
 ------------------------------------------------------------------------
-
-------------------------------------------------------------------------
-## Links
-------------------------------------------------------------------------
-
-
