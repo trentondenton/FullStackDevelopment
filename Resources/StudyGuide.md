@@ -21,7 +21,7 @@
 + What is Inheritance?
 + What is Polymorphism?
 ------------------------------------------------------------------------
-### Databse & API's
+### Database & API's
 + What is an API?
 + What is JSON?
 + What is an Object?
