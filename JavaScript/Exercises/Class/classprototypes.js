@@ -28,7 +28,6 @@ console.log(String.prototype.emojify(myStr));
 // Exercise 3: Class Inheritance
 // Create a class called Character that takes in a name, and weapon.
 // Create a method called attack that returns a string stating the name of the character and the weapon they are attacking with.
-
 // Create a class called Warrior that has its own private property of useShield and method shield().
 // Create a class called Mage that has its own private property and method spell().
 class Character {
