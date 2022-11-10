@@ -80,7 +80,6 @@ WHERE age > 20 and age < 50;
 
 
 -- Select people either under 30 or over 50 with an income above 50000 Include people that are 50 that are from either Japan or Australia
-
 SELECT firstname, income, age from customers
 WHERE income > 50000 AND (age < 30 OR age >= 50)
 and (country = 'Japan' OR country = 'Australia')
@@ -89,6 +88,40 @@ and (country = 'Japan' OR country = 'Australia')
 SELECT SUM(totalamount) from orders
 WHERE (orderdate >= '2004-06-01' AND orderdate <= '2004-06-30') 
 AND totalamount > 100
+
+-- Adjust the following query to display the null values as "No Address"
+SELECT COALESCE(address2, 'No Address')
+FROM customers
+
+-- Fix the following query to apply proper 3VL
+SELECT *
+FROM customers
+WHERE address2 IS NOT null;
+
+-- Fix the following query to apply proper 3VL
+SELECT coalesce(lastName, 'Empty'), * from customers
+where (age IS NULL);
+
+-- Who between the ages of 30 and 50 has an income less than 50 000?
+SELECT *
+FROM customers
+WHERE age BETWEEN 30 AND 50 AND income < 50000;
+
+-- What is the average income between the ages of 20 and 50? (Including 20 and 50)
+SELECT AVG(income)
+FROM customers
+WHERE age BETWEEN 20 AND 50;
+
+--How many orders were made by customer 7888, 1082, 12808, 9623
+SELECT COUNT(orderid)
+FROM orders
+WHERE customerid IN (7888, 1082, 12808, 9623)
+
+
+-- How many cities are in the district of Zuid-Holland, Noord-Brabant and Utrecht?
+SELECT COUNT(id)
+FROM city
+WHERE district IN ('Zuid-Holland', 'Noord-Brabant', 'Utrecht');
 
 
 
