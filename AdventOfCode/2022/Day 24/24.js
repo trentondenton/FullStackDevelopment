@@ -21,41 +21,26 @@ const dayOne = () => {
 
   // Part One
   const map = {
-    A: { name: 'rock', points: 1 },
-    X: { name: 'rock', points: 1 },
-    B: { name: 'paper', points: 2 },
-    Y: { name: 'paper', points: 2 },
-    C: { name: 'paper', points: 3 },
-    Z: { name: 'paper', points: 3 },
+    A: { X: 3, Y: 6, Z: 0 },
+    b: { X: 0, Y: 3, Z: 6 },
+    C: { X: 6, Y: 0, Z: 3 }
   };
 
-  let opponentTotal = 0;
-  let selfTotal = 0;
+  const moveValues = { X: 1, Y: 2, Z: 3 };
 
-  let totals = lines.map((line) => {
-    const opponent = map[line[0]].points
-    const self = map[line[1]].points;
-    let diff = Math.abs(opponent - self);
+  const getScore = (rounds) => {
+    const [opponent, self] = rounds;
+    const gameValues = map[opponent][self];
 
-    if (opponent === self) {
-      return self + 3;
-    } else if ((diff === 1 && self > opponent) || (self === 1 && opponent === 3)) {
-      return self + 6;
-    }
-    else {
-      return self
-    }
-  });
+    return gameValues[self]
 
-  console.log(totals.reduce((a, b) => a + b, 0));
+  }
 
-  // Part Two
-  ;
-}
+  getScore(lines)
 
 
 
 
 
-dayOne();
+  dayOne();
 
