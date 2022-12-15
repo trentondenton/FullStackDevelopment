@@ -1,1 +1,0 @@
-my_path = '/mnt/wslg/distro/home/tdenton/Github Repositories/FullStackDevelopment/Certifications/MS-DP-100/module_one/students.csv'
